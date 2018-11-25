@@ -22,10 +22,18 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 ### Learning Algorithm
 
-We use Deep Q-Learning(DQN) to solve this environment. DQN is a value based method that uses a neural network to approximate the action-value function for a given state. The Neural network takes the state as an input and estimates the expected average reward of taking one of the possible actions in that state. 
+We use Deep Q-Learning(DQN) to solve this environment. DQN is a value based method that uses a neural network to approximate the action-value function for a given state. The Neural network takes the state as an input and estimates the expected average reward of taking one of the possible actions in that state. DQN learns expected reward using a target and local network.
+
+Additionally, we also implement and evaluate two variants of DQN 
+
+    a) Double Deep Q-Learning (DDQN) which uses the local network to select the next state action and the target network to evalauate that action. DDQN reduces the variance of the estimator because the target reward depends on both the local and target networks.
+    
+    b) Dueling Network - Dueling network is a different network architecture that has two heads - one estimates the state-value function and the other estimates the advantage of taking an action.
 
 ###### Network Architecture
-We use a simple neural net
+We use a neural net with 2 Fully Connected (FC) layers with 128 and 64 neurons. Input state space has a dimensionality of 37 and output actions space has 4 dimensions. Hence the networ architecture is 37->128->64->4.
+
+For the Dueling Network, we keep the architecture for the advantage function the same as DQN, but we add an additional FC layer for the state value function. The first layer is common to both the branches.
 
 ### Evaluation
 
