@@ -2,7 +2,7 @@
 
 [image1]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/plots/demo.gif "Trained Agent"
 
-[report]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/Report.md
+[Report]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/Report.md
 
 # Project 1: Navigation
 
@@ -57,6 +57,6 @@ Finally we plot two curves:
     
 2. Off policy average reward over 100 episodes
 
-For the final evaluation report please look at Report.md[report]
+For the final evaluation report please look at the [Report]
 
 
