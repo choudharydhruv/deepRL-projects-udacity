@@ -2,6 +2,10 @@
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
 
+[image2]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/plots/DQN_rewards.png
+
+[image3]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/plots/Offpolicy_rewards.png
+
 # Project 1: Navigation
 
 ### Introduction
@@ -37,12 +41,9 @@ For the Dueling Network, we keep the architecture for the advantage function the
 
 ### Evaluation
 
-##### Training an agent and model structure
-Follow the instructions in `Navigation.ipynb` to get started with training the agent!  
+![Plot comparing on-policy rewards][image2]
 
-1. The environment is considered solved if we  receive an average reward (over 100 episodes) of at least +13. 
-
-2. We have implemented two important classes Agent() `agent.py` and DQNetwork() in `model.py`.
+![Off-policy rewards for DQN][image2]
 
 ### Future Work
 
