@@ -41,28 +41,22 @@ For the Dueling Network, we keep the architecture for the advantage function the
 
 ### Evaluation
 
+All 3 algorithms were able to learn the environment within 600 episodes! We used the following hyperparamenters:
+
+a) Learning Rate: 1e-4
+b) Batch Size 128
+c) Epsilon - decayed from 1 to 0.01 with a decay value of 0.995
+
 ![Plot comparing on-policy rewards][image2]
 
-![Off-policy rewards for DQN][image2]
+Given that this task was not very hard to learn, we do not see any add
+
+![Off-policy rewards for DQN][image3]
 
 ### Future Work
 
+1. We would solve the problem directly from Pixels rather than a state vector, where we expect to see a difference in the performance of the DQN variants
 
-
-3. There is a dqn_run() function that takes in all the hyperparameters and config options to train the agent.
-
-##### Evaluation
-
-Finally we plot two curves: 
-
-1. On-policy average reward for 3 algorithms
-    
-    a) Deep Q-Learning
-    
-    b) Double Deep Q-Learning
-    
-    c) Double Deep Q-Learning with Duelling Network (DuelingDQNetwork() in model.py)
-    
-2. Off policy average reward over 100 episodes
+2. We will implement policy based methods and compare them to DQN.
 
 
