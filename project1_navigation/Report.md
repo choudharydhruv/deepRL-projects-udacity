@@ -1,6 +1,6 @@
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image1]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/plots/demo.gif "Trained Agent"
 
 [image2]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/plots/DQN_rewards.png
 
@@ -56,6 +56,11 @@ Given that this task was not very hard to learn, we do not see any additional be
 ![Off-policy rewards for DQN][image3]
 
 For the off-policy, we achieve an average of 16.56 over 100 rewards.
+
+
+### Trained Weights
+
+The final trained weights are stored in `agent_dqn_weights.pth`
 
 ### Future Work
 
