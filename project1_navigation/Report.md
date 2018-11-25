@@ -47,11 +47,15 @@ a) Learning Rate: 1e-4
 b) Batch Size 128
 c) Epsilon - decayed from 1 to 0.01 with a decay value of 0.995
 
+Final reward achieved over 1000 episodes is 16.5
+
 ![Plot comparing on-policy rewards][image2]
 
-Given that this task was not very hard to learn, we do not see any add
+Given that this task was not very hard to learn, we do not see any additional benefits from any of the DQN variants.
 
 ![Off-policy rewards for DQN][image3]
+
+For the off-policy, we achieve an average of 16.56 over 100 rewards.
 
 ### Future Work
 
