@@ -39,7 +39,8 @@ We used the following hyperparamenters for both single agent and multi agent tra
 4. OUNoise variance 0.15 - we find that the training is sensitive to this noise variance. 0.15 seems to perform best.
 
 Multi-agent: Final reward achieved over 200 episodes is 35.89.
-Sigle-agent: Final reward achieved over 600 episodes is 9.16
+
+Single-agent: Final reward achieved over 600 episodes is 9.16
 
 ![Plot comparing on-policy rewards][image2]
 
