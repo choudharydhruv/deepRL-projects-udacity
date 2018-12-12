@@ -4,9 +4,7 @@
 
 [image2]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project2_continous_control/plots/DDPG_rewards.png
 
-[image3]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project2_continous_control/plots/Offpolicy_rewards.png
-
-# Project 2: Continous COntrol
+# Project 2: Continous Control
 
 ### Introduction
 
@@ -22,6 +20,7 @@ The observation space consists of 33 variables corresponding to position, rotati
 
 We use Deep Deterministic Policy Gradient(DDPG) to solve this environment. DDPG is a actor-crtic method that uses a an actor to explicitly learn the policy and a critic that estimates the value for a given state and action. Both actor and critic use a target network to make the learning tractable
 
+We attempted to solve both the single agent and multi agent environment.
 
 ###### Network Architecture
 
@@ -32,19 +31,18 @@ The first hidden layer maps from state size to 128, the second layer takes a con
 
 ### Evaluation
 
-We used the following hyperparamenters:
+We used the following hyperparamenters for both single agent and multi agent training:
 
-a) Learning Rate: Actor and critic both use 1e-4
-b) Batch Size 128
-c) Buffer Size for Shared memory  1e6
-d) OUNoise variance 0.15 - we find that the training is sensitive to this noise variance. 0.15 seems to perform best.
+1. Learning Rate: Actor and critic both use 1e-4
+2. Batch Size 128
+3. Buffer Size for Shared memory  1e6
+4. OUNoise variance 0.15 - we find that the training is sensitive to this noise variance. 0.15 seems to perform best.
 
-Final reward achieved over 200 episodes is 35.89 for the multi-agent setting.
+Multi-agent: Final reward achieved over 200 episodes is 35.89.
+Sigle-agent: Final reward achieved over 600 episodes is 9.16
 
 ![Plot comparing on-policy rewards][image2]
 
-
-![Off-policy rewards for DDPG agent learnt with multiple environments][image3]
 
 For the off-policy, we achieve an average of 35.59.
 

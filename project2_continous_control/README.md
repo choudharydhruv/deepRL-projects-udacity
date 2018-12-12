@@ -26,7 +26,7 @@ The second version is useful for algorithms like [PPO](https://arxiv.org/pdf/170
 
 ### Solving the Environment
 
-Note that the project submission need only solve one of the two versions of the environment. But we solve both the versions with a DDPG agent.
+Note that the project submission need only solve one of the two versions of the environment.
 
 #### Option 1: Solve the First Version
 
@@ -76,14 +76,13 @@ Follow the instructions in `Continuous_Control.ipynb` to get started with traini
 
 ##### Evaluation
 
-Finally we plot two curves: 
+Finally we plot the  reward curves: 
 
-1. On-policy average reward for 2 algorithms
+On-policy average reward for 2 algorithms
     
     a) DDPG with single agent
     
     b) DDPG with multiple agents
     
-2. Off policy average reward over 100 episodes
 
 For the final evaluation report please look at the [Report]
