@@ -1,10 +1,8 @@
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif "Trained Agent"
+[image1]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project2_continous_control/plots/demo.gif "Trained Agent"
 
-[image1]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/plots/demo.gif "Trained Agent"
-
-[Report]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project1_navigation/Report.md
+[Report]: https://github.com/choudharydhruv/deepRL-projects-udacity/blob/master/project2_continous_control/Report.md
 
 # Project 2: Continuous Control
 
@@ -67,28 +65,24 @@ For the multi_agent environment (Option 2), place the unzipped file in the `proj
 
 ### Instructions
 
-Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!  
-
 ##### Training an agent and model structure
-Follow the instructions in `Navigation.ipynb` to get started with training the agent!  
+Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!  
 
 1. The environment is considered solved if we  receive an average reward (over 100 episodes) of at least +13. 
 
-2. We have implemented two important classes Agent() `agent.py` and DQNetwork() in `model.py`.
+2. We have implemented two important classes Agent() `agent.py` and Agent() in `model.py`.
 
-3. There is a dqn_run() function that takes in all the hyperparameters and config options to train the agent.
+3. There is a ddpg_run() function that takes in all the hyperparameters and config options to train the agent.
 
 ##### Evaluation
 
 Finally we plot two curves: 
 
-1. On-policy average reward for 3 algorithms
+1. On-policy average reward for 2 algorithms
     
-    a) Deep Q-Learning
+    a) DDPG with single agent
     
-    b) Double Deep Q-Learning
-    
-    c) Double Deep Q-Learning with Duelling Network (DuelingDQNetwork() in model.py)
+    b) DDPG with multiple agents
     
 2. Off policy average reward over 100 episodes
 
