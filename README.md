@@ -8,4 +8,4 @@ For this project, we will train an agent to navigate (and collect bananas!) in a
 
 # Project 2: Continous Control
 
-For this environment we will train a multi-jointed arm that tracks a spgerical ball
+For this environment we will train a multi-jointed arm that tracks a spherical ball
