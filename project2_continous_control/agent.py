@@ -63,7 +63,7 @@ class Agent():
     def step_sharedmemory(self, experiences):
         self.learn(experiences)
 
-    def act(self, state, add_noise=True, atten=1):
+    def act(self, state, add_noise=True, damp=1):
         """Returns actions for given state as per current policy."""
         state = torch.from_numpy(state).float().to(device)
         self.actor_local.eval()
@@ -71,7 +71,7 @@ class Agent():
             action = self.actor_local(state).cpu().data.numpy()
         self.actor_local.train()
         if add_noise:
-            action += self.noise.sample()*atten
+            action += self.noise.sample()*damp
         return np.clip(action, -1, 1)
 
     def reset(self):
