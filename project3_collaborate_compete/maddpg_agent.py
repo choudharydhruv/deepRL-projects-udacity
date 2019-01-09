@@ -44,7 +44,7 @@ class Agent():
         self.gamma = gamma
         self.tau = tau
         self.eps = eps_start
-        self.eps_discount = 1/(eps_end_episode)  # set decay rate based on epsilon end target
+        self.eps_discount = 1/(eps_end_episode)
         self.time = 0
 
         # Actor Network (w/ Target Network)
@@ -101,7 +101,6 @@ class Agent():
 
         # ---------------------------- update critic ---------------------------- #
         actions_next = self.actor_target(next_states)
-        # For each agent construct the next actions vector
         if agent_id == 0:
             actions_next = torch.cat((actions_next, actions[:,2:]), dim=1)
         else:
@@ -121,7 +120,6 @@ class Agent():
         # ---------------------------- update actor ---------------------------- #
         # Compute actor loss
         actions_pred = self.actor_local(states)
-        # Construct action prediction vector relative to each agent
         if agent_id == 0:
             actions_pred = torch.cat((actions_pred, actions[:,2:]), dim=1)
         else:
