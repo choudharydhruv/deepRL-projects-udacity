@@ -37,7 +37,6 @@ class Agent():
         """
         self.state_size = state_size
         self.action_size = action_size
-        self.num_agents = num_agents
         self.seed = random.seed(random_seed)
         self.batch_size = batch_size
         self.update_frequency = update_frequency
@@ -58,7 +57,7 @@ class Agent():
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=lr_critic, weight_decay=weight_decay)
 
         # Noise process
-        self.noise = OUNoise( (num_agents,action_size), random_seed)
+        self.noise = OUNoise( (1,action_size), random_seed)
 
         # Replay memory
         self.memory = ReplayBuffer(action_size, int(replay_buffer_len), self.batch_size, random_seed)
