@@ -72,7 +72,7 @@ class Agent():
         #Learn multiple times after the first 200 episodes when the buffer is warmed up with good experiences
         #This is alse useful in speeding up the early iterations which have a lot more exploration.
         if len(self.memory) > self.batch_size and self.time % self.update_frequency == 0:
-            learn_itrs = 5 if episode > 200 else 5
+            learn_itrs = 5 if episode > 200 else 1
             for _i in range(learn_itrs):
                 experiences = self.memory.sample()
                 self.learn(experiences, agent_id)
