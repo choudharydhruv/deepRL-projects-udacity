@@ -24,11 +24,11 @@ We use the Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environmen
 
 **Soft Updates** : We also used a significantly higher value of softupdate rate for this project. We set the softupdate rate (tau) to 1e-2. This was determined through cross validation.
 
-###### Network Architecture
+### Network Architecture
 
-**Actor**: We use a neural net with 2 Fully Connected (FC) layers with 128 and 64 neurons. Input state space has a dimensionality of 24  and output actions space has 2 dimensions for each agent. The output nodes have a non linearity of tanh to bound them to -1,1 range.
+**Actor**: We use a neural net with 2 Fully Connected (FC) layers with 256 and 64 neurons. Input state space has a dimensionality of 24  and output actions space has 2 dimensions for each agent. The output nodes have a non linearity of tanh to bound them to -1,1 range.
 
-**Critic**: The first hidden layer maps from state size to 128, the second layer takes a concatenated output of first layer and the action vectors for all agents and maps that to 64 neurons. The output for the critic is a single dimension (the action value). We use network initializations identical to the original DDPG paper.
+**Critic**: The first hidden layer maps from state size to 256, the second layer takes a concatenated output of first layer and the action vectors for all agents and maps that to 64 neurons. The output for the critic is a single dimension (the action value). We use network initializations identical to the original DDPG paper.
 
 **Batch Normalization**: Additionaly we use batch normalization which is a common technique to make learning tractable. We found that unlike the previous two projects, the learning for MADDPG does not converge without batch normalization. We apply batch normalization after all layers. We also used a slightly higher batch size of 128 to make the learning more stable.
 
