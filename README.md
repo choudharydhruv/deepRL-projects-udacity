@@ -24,5 +24,3 @@ For this environment we will train a multi-jointed arm that tracks a spherical b
 ![Trained Agent][image3]
 
 For this environment we will train two agents that learn to play Tennis with each other
-
-For this environment we will train a multi-jointed arm that tracks a spherical ball
