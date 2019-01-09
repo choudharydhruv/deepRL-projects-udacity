@@ -38,6 +38,7 @@ class Agent():
         self.state_size = state_size
         self.action_size = action_size
         self.seed = random.seed(random_seed)
+        self.num_agents = num_agents
         self.batch_size = batch_size
         self.update_frequency = update_frequency
         self.gamma = gamma
@@ -77,8 +78,9 @@ class Agent():
                 experiences = self.memory.sample()
                 self.learn(experiences, agent_id)
 
-    def act(self, states, add_noise):
+    def act(self, states, add_noise, agent_id):
         """Returns actions for  agents as per current policy for their states."""
+        states = np.split(states, 2, axis=1)[agent_id]
         states = torch.from_numpy(states).float().to(device)
         self.actor_local.eval()
         with torch.no_grad():
@@ -99,7 +101,8 @@ class Agent():
         states, actions, rewards, next_states, dones = experiences
 
         # ---------------------------- update critic ---------------------------- #
-        actions_next = self.actor_target(next_states)
+        agent_next_states = torch.split(next_states, self.state_size, dim=1)[agent_id]
+        actions_next = self.actor_target(agent_next_states)
         if agent_id == 0:
             actions_next = torch.cat((actions_next, actions[:,2:]), dim=1)
         else:
@@ -118,7 +121,8 @@ class Agent():
 
         # ---------------------------- update actor ---------------------------- #
         # Compute actor loss
-        actions_pred = self.actor_local(states)
+        agent_states = torch.split(states, self.state_size, dim=1)[agent_id]
+        actions_pred = self.actor_local(agent_states)
         if agent_id == 0:
             actions_pred = torch.cat((actions_pred, actions[:,2:]), dim=1)
         else:

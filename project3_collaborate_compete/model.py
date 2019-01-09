@@ -24,7 +24,7 @@ class Actor(nn.Module):
         """
         super(Actor, self).__init__()
         self.seed = torch.manual_seed(seed)
-        self.fc1 = nn.Linear(state_size*2, fc1_units)
+        self.fc1 = nn.Linear(state_size, fc1_units)
         self.b1  = nn.BatchNorm1d(fc1_units)
         self.fc2 = nn.Linear(fc1_units, fc2_units)
         self.b2  = nn.BatchNorm1d(fc2_units)

@@ -43,7 +43,7 @@ We used the following hyperparamenters for both single agent and multi agent tra
 5. Softupdate rate (tau) = 1e-2
 6. Reward discount (gamma) = 0.99
 
-Final reward achieved over 702 episodes is 0.5.
+Final reward achieved over 809 episodes is 0.51.
 
 ![Plot of rewards][image2]
 

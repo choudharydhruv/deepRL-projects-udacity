@@ -58,7 +58,7 @@ Follow the instructions in `Tennis.ipynb` to get started with training your own 
 
 ##### Evaluation
 
-Finally we plot the  reward curves: We solve the environment in 702 episodes.
+Finally we plot the  reward curves: We solve the environment in 809 episodes with a reward of 0.51.
 
 ![Plot of rewards][image2]
 
